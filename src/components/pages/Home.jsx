@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import '../../App.css';
 import '../homepage_styles.css';
 import GiantTimerSplash from '../GiantTimerSplash';
@@ -16,11 +16,14 @@ const convertVhToPx = (vh) => {
 function Home() {
   const scrollPosition = useRef(0);
   const lastScrollTime = useRef(0);
+  const [scrollY, setScrollY] = useState(window.scrollY); // State to track scroll position for rendering
 
   const scrollSticky = convertVhToPx(49); // this variable controls when the sticky timer navbar thingie appears
 
   useEffect(() => {
     const handleScroll = () => {
+      setScrollY(window.scrollY); // Update scrollY state
+
       if (window.scrollY < convertVhToPx(49)) {
         // Check if the scroll direction is down
         console.log('Window.scrollY = ' + window.scrollY);
@@ -48,7 +51,7 @@ function Home() {
     };
   }, []);
 
-  return scrollPosition.current > scrollSticky ? (
+  return scrollY > scrollSticky ? (
     <>
       <div className="homepage-flex-container">
         <GiantTimerSplash />
