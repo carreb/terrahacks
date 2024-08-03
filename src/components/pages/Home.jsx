@@ -4,6 +4,7 @@ import '../homepage_styles.css';
 import GiantTimerSplash from '../GiantTimerSplash';
 import BloodDripSVG from '../BloodDripSVG.jsx'; // ignore error? it doesn't seem to mean anything
 import StickyTime from '../StickyTimer';
+import Timeline from '../Timeline';
 
 const convertPxToVh = (px) => {
   return (px / window.innerHeight) * 100;
@@ -58,6 +59,7 @@ function Home() {
         <BloodDripSVG />
       </div>
       <StickyTime />
+      <Timeline />
     </>
   ) : (
     <div className="homepage-flex-container">
