@@ -6,6 +6,7 @@ function GiantTimerSplash () {
     const [TIME, setTime] = useState({});
 
     const D_DAY = new Date(16725243600 * 1000);
+    const CUTOFF_DAY = new Date(1893474010000);
 
     let getTimeUntilDDay = () => {
         let time = {}
@@ -37,11 +38,23 @@ function GiantTimerSplash () {
         return time > 1 ? 's' : '';
     }
 
+    let getYearsUntilCutoffDay = () => {
+        let currentTime = new Date().getTime();
+        let timeUntil = CUTOFF_DAY - currentTime;
+        let years = Math.ceil(timeUntil / (1000 * 60 * 60 * 24 * 365));
+        return years;
+    }
+
     useEffect(() => {
+        try {
         getTimeUntilDDay();
         setInterval(() => {
             getTimeUntilDDay();
         }, 1000);
+        } catch(err) {
+            // Do nothing (#skibidi)
+        }
+        // This code floods the console with errors which is rather annoying
     })
 
     return (
@@ -58,7 +71,11 @@ function GiantTimerSplash () {
                 </h1>
                 <h3 className='hero-section-flair-text'>BEFORE IT IS COMPLETELY UNINHABITABLE.</h3>
             </div>
-
+            <div className='hero-section-smaller giant-timer'>
+                <h3 className='hero-section-flair-text'>AND THE NEXT</h3>
+                <h1 className='timer-text giant-timer'>{getYearsUntilCutoffDay()} YEARS</h1>
+                <h3 className='hero-section-flair-text'>ARE THE MOST IMPORTANT.</h3>
+            </div>
         </>
     );
 }
