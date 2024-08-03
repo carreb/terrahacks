@@ -27,6 +27,8 @@ const Timeline = () => {
         if (newCard) {
             newCard.style.display = 'block';
         }
+        // Scroll to the card
+        window.scrollTo(0, newCard.offsetTop);
     }
 
     return (

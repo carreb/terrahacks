@@ -65,6 +65,7 @@ function Home() {
     <div className="homepage-flex-container">
       <GiantTimerSplash />
       <BloodDripSVG />
+      <h1>An error occurred.</h1>
     </div>
   );
 }
