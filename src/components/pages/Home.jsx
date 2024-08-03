@@ -5,49 +5,49 @@ import GiantTimerSplash from '../GiantTimerSplash';
 import BloodDripSVG from '../BloodDripSVG.jsx'; // ignore error? it doesn't seem to mean anything
 import StickyTime from '../StickyTimer';
 
-function Home () {
 
-    const [pixel, setPixel] = useState(0)
-
-    const scrollSticky = 900
-
-    let lastKnownScrollPosition = 0;
-    let ticking = false;
-
-    function doSomething(scrollPos) {
-        setPixel(lastKnownScrollPosition);
-    }
-
-    document.addEventListener("scroll", (event) => {
-    lastKnownScrollPosition = window.scrollY;
-
-    if (!ticking) {
-        window.requestAnimationFrame(() => {
-        doSomething(lastKnownScrollPosition);
-        ticking = false;
-        });
-
-        ticking = true;
-    }
-    });
-    
-    return (
-        (pixel < scrollSticky) ? (
-            <>
-            <div className='homepage-flex-container'>
-                <GiantTimerSplash />
-                <div className="padding">{window.scrollY}</div>
-            </div>
-            </>
-        ) : (
-            <>
-            <div className='homepage-flex-container'>
-                <GiantTimerSplash />
-                <div className="padding">hello</div>
-            </div>
-            </>
-        )
-    );
+const convertPxToVh = (px) => {
+    return px / window.innerHeight * 100;
 }
 
-export default Home; 
+const convertVhToPx = (vh) => {
+    return vh / 100 * window.innerHeight;
+}
+
+function Home() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const scrollSticky = convertVhToPx(49); // this variable controls when the sticky timer navbar thingie appears
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  return (
+    scrollPosition > scrollSticky ? (
+      <>
+        <div className='homepage-flex-container'>
+          <GiantTimerSplash />
+          <BloodDripSVG />
+        </div>
+        <StickyTime />
+      </>
+    ) : (
+      <div className='homepage-flex-container'>
+        <GiantTimerSplash />
+        <BloodDripSVG />
+      </div>
+    )
+  );
+}
+
+export default Home;

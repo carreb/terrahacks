@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './sticky_timer.css';
 
 function StickyTimer() {
     const [TIME, setTime] = useState({});
@@ -44,17 +45,25 @@ function StickyTimer() {
 
     return (
         <>
-            <div className='hero-section sticky-timer'>
-                <h3 className='hero-section-flair-text'>THE WORLD HAS</h3>
-                <h1 className="timer-text giant-timer">
-                    {TIME.y}<span className="time-subsection sticky-timer">years</span>
-                    {TIME.mo}<span className="time-subsection sticky-timer">months</span>
-                    {TIME.d}<span className="time-subsection sticky-timer">days</span>
-                    {TIME.h}<span className="time-subsection sticky-timer">hours</span>
-                    {TIME.min}<span className="time-subsection sticky-timer">minutes</span>
-                    {TIME.s}<span className="time-subsection sticky-timer">seconds</span>
-                </h1>
-                <h3 className='hero-section-flair-text'>BEFORE IT IS COMPLETELY UNINHABITABLE.</h3>
+            <div className='sticky-timer'>
+                <p className='sticky-timer-flair-text' style={
+                    {"margin-right": '5px'}
+                }>EARTH HAS</p>
+                    <span className='sticky-timer-text'>{TIME.y}</span>
+                    <span className='sticky-timer-subsection'>year{isTimePlural(TIME.y)}</span>
+                    <span className='sticky-timer-text'>{TIME.mo}</span>
+                    <span className='sticky-timer-subsection'>month{isTimePlural(TIME.mo)}</span>
+                    <span className='sticky-timer-text'>{TIME.d}</span>
+                    <span className='sticky-timer-subsection'>day{isTimePlural(TIME.d)}</span>
+                    <span className='sticky-timer-text'>{TIME.h}</span>
+                    <span className='sticky-timer-subsection'>hour{isTimePlural(TIME.h)}</span>
+                    <span className='sticky-timer-text'>{TIME.min}</span>
+                    <span className='sticky-timer-subsection'>minute{isTimePlural(TIME.min)}</span>
+                    <span className='sticky-timer-text'>{TIME.s}</span>
+                    <span className='sticky-timer-subsection'>second{isTimePlural(TIME.s)}</span>
+                <p className='sticky-timer-flair-text' style={
+                    {"margin-left": '5px'}
+                }>LEFT.</p>    
             </div>
 
         </>

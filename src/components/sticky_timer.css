@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+.sticky-timer-flair-text {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: 30px;
+}
+
+.sticky-timer-text {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.sticky-timer-subsection {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: 30px;
+}
+
+.sticky-timer {
+    background: #000;
+    height: 70px;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    color: #ff1717;
+    font-size: 30px;
+    animation: sticky-timer-enter-animation 0.2s forwards ease-in-out;
+    box-shadow: ;
+}
+
+@keyframes sticky-timer-enter-animation {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes sticky-timer-exit-animation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
