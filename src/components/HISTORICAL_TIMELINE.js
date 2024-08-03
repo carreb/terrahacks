@@ -246,14 +246,11 @@ let timeline = [
     year: 1700,
   },
   {
-    title: "1800",
-    hasCard: false,
-    year: 1800,
-  },
-  {
-    title: "1900",
-    hasCard: false,
+    title: "1900 CE",
+    hasCard: true,
     year: 1900,
+    cardTitle: "Advancements in Climate Science",
+    cardDetailedText: "At the turn of the 20th century, scientists began to study the effects of human activity on the climate. Svante Arrhenius, a Swedish scientist, was the first to suggest that the burning of fossil fuels and other human-made emissions could lead to global warming. This theory is what we know as the Greenhouse Effect. There were also many international conferences held to discuss climate change.",
   },
   {
     title: "2000 CE",
@@ -302,7 +299,7 @@ let timeline = [
     cardTitle: "Doomsday",
     cardDetailedText:
       "The world's climate has changed to the point where it is no longer habitable for humans.",
-  },
+  }
 ];
 
 export default timeline;
