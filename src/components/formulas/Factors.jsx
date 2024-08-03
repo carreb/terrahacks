@@ -19,16 +19,18 @@ function Factors() {
     useEffect(() => {
         setInterval(() => {
             let elapsed = timeElapsed(startTime)
-            console.log(elapsed)
-            setHumanPop(humanPop-elapsed)
-            console.log(humanPop)
+            setHumanPop(humanPop-elapsed/100)
+            setLandFloraPop(landFloraPop-elapsed/50)
+            setLandFaunaPop(landFaunaPop-elapsed/25)
         }, 1000);
     })
 
     return (
         <>
             <div>
-                {thing}
+                {humanPop} <br/>
+                {landFloraPop} <br/>
+                {landFaunaPop} <br/>
             </div>
         </>
     );
