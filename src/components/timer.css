@@ -11,6 +11,17 @@
     color: #ff1717;
 }
 
+.hero-section-smaller {
+    background: rgb(0, 0, 0);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    color: #ff1717;
+}
+
 .hero-section-flair-text {
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
@@ -31,4 +42,3 @@
     font-weight: 200;
     font-size: 3.5rem;
 }
-
