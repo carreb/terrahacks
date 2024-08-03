@@ -35,7 +35,7 @@
     color: #ff1717;
     font-size: 30px;
     animation: sticky-timer-enter-animation 0.2s forwards ease-in-out;
-    box-shadow: ;
+    box-shadow: 0px 0px 20px rgba(12, 12, 12, 0.75);
 }
 
 @keyframes sticky-timer-enter-animation {
