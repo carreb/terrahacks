@@ -20,6 +20,8 @@
     flex-direction: column;
     width: 100%;
     color: #ff1717;
+    padding: 0;
+    margin-bottom: -10px;
 }
 
 .hero-section-flair-text {
