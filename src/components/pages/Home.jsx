@@ -28,9 +28,6 @@ function Home() {
 
       if (window.scrollY < convertVhToPx(49)) {
         // Check if the scroll direction is down
-        console.log('Window.scrollY = ' + window.scrollY);
-        console.log('ScrollPosition = ' + scrollPosition.current);
-
         if (window.scrollY > scrollPosition.current) {
           // if there was a scroll event too recently, don't do anything
           if (Date.now() - lastScrollTime.current < 100) {

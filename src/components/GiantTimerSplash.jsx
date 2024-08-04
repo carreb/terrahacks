@@ -8,8 +8,8 @@ function GiantTimerSplash () {
     const D_DAY = new Date(16725243600 * 1000);
     const CUTOFF_DAY = new Date(1893474010000);
 
-    let getTimeUntilDDay = () => {
-        let time = {}
+    const getTimeUntilDDay = () => {
+        let time = {};
         let currentTime = new Date().getTime();
         let timeUntil = D_DAY - currentTime;
         let years = Math.floor(timeUntil / (1000 * 60 * 60 * 24 * 365));
@@ -23,39 +23,31 @@ function GiantTimerSplash () {
         let minutes = Math.floor(timeUntil / (1000 * 60));
         timeUntil -= minutes * 1000 * 60;
         let seconds = Math.floor(timeUntil / 1000);
+
         // Pad out any numbers less than 10
         years = years < 10 ? '0' + years : years;
         months = months < 10 ? '0' + months : months;
         days = days < 10 ? '0' + days : days;
         hours = hours < 10 ? '0' + hours : hours;
         minutes = minutes < 10 ? '0' + minutes : minutes;
-        seconds = seconds < 10 ? '0' + seconds : seconds
-        // goated code
-        time = {y: years, mo: months, d: days, h: hours, min: minutes, s: seconds};
-        setTime(time);
-    }
-    let isTimePlural = (time) => {
-        return time > 1 ? 's' : '';
-    }
+        seconds = seconds < 10 ? '0' + seconds : seconds;
 
-    let getYearsUntilCutoffDay = () => {
+        time = { y: years, mo: months, d: days, h: hours, min: minutes, s: seconds };
+        setTime(time);
+    };
+
+    const getYearsUntilCutoffDay = () => {
         let currentTime = new Date().getTime();
         let timeUntil = CUTOFF_DAY - currentTime;
         let years = Math.ceil(timeUntil / (1000 * 60 * 60 * 24 * 365));
         return years;
-    }
+    };
 
     useEffect(() => {
-        try {
         getTimeUntilDDay();
-        setInterval(() => {
-            getTimeUntilDDay();
-        }, 1000);
-        } catch(err) {
-            // Do nothing (#skibidi)
-        }
-        // This code floods the console with errors which is rather annoying
-    })
+        const intervalId = setInterval(getTimeUntilDDay, 1000);
+        return () => clearInterval(intervalId); // Cleanup interval on component unmount
+    }, []); // Empty dependency array to run only once on mount
 
     return (
         <>
@@ -80,4 +72,4 @@ function GiantTimerSplash () {
     );
 }
 
-export default GiantTimerSplash; 
+export default GiantTimerSplash;
