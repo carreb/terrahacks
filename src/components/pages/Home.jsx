@@ -4,6 +4,8 @@ import '../homepage_styles.css';
 import GiantTimerSplash from '../GiantTimerSplash';
 import BloodDripSVG from '../BloodDripSVG.jsx'; // ignore error? it doesn't seem to mean anything
 import StickyTime from '../StickyTimer';
+import Timeline from '../Timeline';
+import LeftColumn from '../LeftColumn';
 
 const convertPxToVh = (px) => {
   return (px / window.innerHeight) * 100;
@@ -26,9 +28,6 @@ function Home() {
 
       if (window.scrollY < convertVhToPx(49)) {
         // Check if the scroll direction is down
-        console.log('Window.scrollY = ' + window.scrollY);
-        console.log('ScrollPosition = ' + scrollPosition.current);
-
         if (window.scrollY > scrollPosition.current) {
           // if there was a scroll event too recently, don't do anything
           if (Date.now() - lastScrollTime.current < 100) {
@@ -58,11 +57,17 @@ function Home() {
         <BloodDripSVG />
       </div>
       <StickyTime />
+      <Timeline />
+      <div className='news-columns-container'>
+        <LeftColumn />
+        <LeftColumn />
+      </div>
     </>
   ) : (
     <div className="homepage-flex-container">
       <GiantTimerSplash />
       <BloodDripSVG />
+      <h1>An error occurred.</h1>
     </div>
   );
 }

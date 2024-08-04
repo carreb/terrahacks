@@ -1,0 +1,36 @@
+.homepage-news-column {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    font-size: 18px;
+}
+
+.left-section {
+    display: block;
+}
+
+.float-image-left {
+    float: left;
+    margin-right: 15px;
+    /* Add some margin to the right for spacing */
+    width: 250px;
+    height: 150px;
+}
+
+.float-image-right {
+    float: right;
+    margin-left: 15px;
+    /* Add some margin to the left for spacing */
+    width: 250px;
+    height: 150px;
+}
+
+img {
+    width: 250px;
+    height: 150px;
+}
+
+p {
+    overflow-x: auto;
+    display: inline;
+}

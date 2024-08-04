@@ -41,13 +41,13 @@ function StickyTimer() {
         setInterval(() => {
             getTimeUntilDDay();
         }, 1000);
-    })
+    }, [])
 
     return (
         <>
             <div className='sticky-timer'>
                 <p className='sticky-timer-flair-text' style={
-                    {"margin-right": '5px'}
+                    {marginRight: '5px'}
                 }>EARTH HAS</p>
                     <span className='sticky-timer-text'>{TIME.y}</span>
                     <span className='sticky-timer-subsection'>year{isTimePlural(TIME.y)}</span>
@@ -62,7 +62,7 @@ function StickyTimer() {
                     <span className='sticky-timer-text'>{TIME.s}</span>
                     <span className='sticky-timer-subsection'>second{isTimePlural(TIME.s)}</span>
                 <p className='sticky-timer-flair-text' style={
-                    {"margin-left": '5px'}
+                    {marginLeft: '5px'}
                 }>LEFT.</p>    
             </div>
 
