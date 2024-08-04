@@ -6,7 +6,7 @@ const LeftColumn = () => {
         <div className="homepage-news-column">
             <div className="left-section">
                 <h1 className="smaller-title">Greenhouse Gases</h1>
-                <img src="../public/images/graph_gases.png" alt="" className="float-image-left" />
+                <img src="/images/graph_gases.png" alt="" className="float-image-left" />
                 <p>
                     Greenhouse gases are by far the greatest contributors of climate change.
                     To stop climate change, greenhouse gas emissions need to be reduced to net zero worldwide.
@@ -18,7 +18,7 @@ const LeftColumn = () => {
             </div>
             <div className="right-section">
                 <h1 className="smaller-title">Methane (Greenhouse Gases cont.)</h1>
-                <img src="../public/images/graph_1.png" alt="" className="float-image-right" />
+                <img src="/images/graph_1.png" alt="" className="float-image-right" />
                 <p>
                     Methane is the second most generated greenhouse gas, where modern concentrations are 2.5x more than their pre industrial concentrations.
                     The primary souces of emission of methane gas are from dairy farms and from melting glaciers and ice caps.
