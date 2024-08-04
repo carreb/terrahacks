@@ -6,6 +6,7 @@ import BloodDripSVG from '../BloodDripSVG.jsx'; // ignore error? it doesn't seem
 import StickyTime from '../StickyTimer';
 import Timeline from '../Timeline';
 import LeftColumn from '../LeftColumn';
+import RightColumn from '../RightColumn';
 import { useNavigate } from 'react-router-dom';
 
 const convertPxToVh = (px) => {
@@ -65,9 +66,14 @@ function Home() {
       </div>
       <StickyTime />
       <Timeline />
+      <div className='news-columns-header'>
+        <h1 className='large-title' style={{
+            marginTop: '0'
+        }}>WHAT CAUSES CLIMATE CHANGE?</h1>
+      </div>
       <div className='news-columns-container'>
         <LeftColumn />
-        <LeftColumn />
+        <RightColumn />
       </div>
     </>
   ) : (

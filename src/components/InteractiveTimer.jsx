@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css';
-import './timer.css';
+import './interactive-timer.css';
 
 function GiantTimerSplash () {
     const [TIME, setTime] = useState({});
