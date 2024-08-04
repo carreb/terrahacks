@@ -5,14 +5,22 @@ import './timer.css';
 function GiantTimerSplash () {
     const [TIME, setTime] = useState({});
 
-    const [co2, setCo2] = useState()
-    const [methane, setMethane] = useState()
-    const [n2o, setN2o] = useState()
-    const [fluoride, setFluoride] = useState()
-    const [natural, setNatural] = useState()
-    const [absorbtion, setAbsorbtion] = useState()
+    // range 24743*0.04 = 990 to 24743*1.96 = 48496
 
-    const D_DAY = new Date(Date.parse("January 1st 2020") + co2 * methane * n2o * fluoride * natural * absorbtion * 1000);
+    // range 24743*0.99 = 24495 to 24743*1.01 = 24990
+
+    // range 24743*0.97 = 24000 to 24743*1.03 = 25485
+
+    const [contributors, useState] = useState({
+        greenhouse: 24743,
+        absorbtion: 24743,
+        natural: 24743
+    })
+
+    // 16725243600 * 1000
+    // 1576800000 * 1000
+    // 15148443600 * 1000
+    const D_DAY = new Date(Date.parse("January 1st 2020") + contributors.greenhouse * contributors.natural * contributors.absorbtion * 1000);
 
     const getTimeUntilDDay = () => {
         let time = {};
@@ -66,6 +74,18 @@ function GiantTimerSplash () {
                 <h3 className='hero-section-flair-text'>AND THE NEXT</h3>
                 <h1 className='timer-text giant-timer'>{getYearsUntilCutoffDay()} YEARS</h1>
                 <h3 className='hero-section-flair-text'>ARE THE MOST IMPORTANT.</h3>
+            </div>
+            <div class="slidecontainer">
+                <input type="range" min="-1" max="1" value="0" class="slider" id="greenhouseGases" onChange={(props) => { const { value } = props; 
+                                                                                                                            setTime({greenhouse: 24743 - (24743 * 0.96 * value)})}}>Greenhouse Gases</input>
+            </div>
+            <div class="slidecontainer">
+                <input type="range" min="-1" max="1" value="0" class="slider" id="Absorbtion" onChange={(props) => { const { value } = props;
+                                                                                                                        setTime({absorbtion: 24743 - (24743 * 0.03 * value)})}}>Absorbtion</input>
+            </div>
+            <div class="slidecontainer">
+                <input type="range" min="-1" max="1" value="0" class="slider" id="Natural Changes" onChnage={(props) => { const { value } = props;
+                                                                                                                            setTime({natural: 24743 - (24743 * 0.01 * value)})}}>Natural Changes</input>
             </div>
         </>
     );
