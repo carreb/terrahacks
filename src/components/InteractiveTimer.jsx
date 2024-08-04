@@ -7,21 +7,18 @@ function InteractiveTimer () {
     const [TIME, setTime] = useState({});
 
     // range 24743*0.04 = 990 to 24743*1.96 = 48496
-
+    const [greenhouse, setGreenhouse] = useState(24743);
     // range 24743*0.99 = 24495 to 24743*1.01 = 24990
-
+    const [absorbtion, setAbsorbtion] = useState(24743);
     // range 24743*0.97 = 24000 to 24743*1.03 = 25485
+    const [natural, setNatural] = useState(24743)
 
-    const [contributors, setContributors] = useState({
-        greenhouse: 24743,
-        absorbtion: 24743,
-        natural: 24743
-    })
+    const [greenhouseSlider, setGreenhouseSlider] = useState(0)
 
-    // 16725243600 * 1000
-    // 1576800000 * 1000
+    // 16725243600 * 1000 
+    // 1576800000 * 1000 01/01/2020 
     // 15148443600 * 1000
-    const D_DAY = new Date(Date.parse("January 1st 2020") + contributors.greenhouse * contributors.natural * contributors.absorbtion * 1000);
+    const [D_DAY, setD_DAY] = useState(new Date(1576800000 + greenhouse * natural * absorbtion));
 
     const getTimeUntilDDay = () => {
         let time = {};
@@ -57,6 +54,38 @@ function InteractiveTimer () {
         return () => clearInterval(intervalId); // Cleanup interval on component unmount
     }, []); // Empty dependency array to run only once on mount
 
+    const handleGreenhouseSlider = (event) => {
+        const sliderValue = parseFloat(event.target.value);
+        console.log(sliderValue);
+        console.log(24743 - (24743 * 0.96 * sliderValue/ 100))
+        setGreenhouse(24743 - (24743 * 0.96 * sliderValue/ 100))
+        console.log(greenhouse)
+        setD_DAY(new Date(1576800000 + greenhouse * natural * absorbtion));
+        console.log(D_DAY)
+    }
+
+    const handleAbsorbtionSlider = (event) => {
+        const sliderValue = parseFloat(event.target.value);
+        console.log(sliderValue);
+        console.log(24743 - (24743 * 0.03 * sliderValue/ 100))
+        setGreenhouse(24743 - (24743 * 0.03 * sliderValue/ 100))
+        setD_DAY(new Date(1576800000 + greenhouse * natural * absorbtion));
+        console.log(D_DAY)
+    }
+
+    const handleNaturalSlider = (event) => {
+        const sliderValue = parseFloat(event.target.value);
+        console.log(sliderValue);
+        console.log(24743 - (24743 * 0.01 * sliderValue/ 100))
+        setGreenhouse(24743 - (24743 * 0.01 * sliderValue/ 100))
+        setD_DAY(new Date(1576800000 + greenhouse * natural * absorbtion));
+        console.log(D_DAY)
+    }
+
+    useEffect(() => {
+        getTimeUntilDDay()
+    }, [D_DAY])
+
     return (
         <>
             <div className='hero-section giant-timer'>
@@ -71,17 +100,14 @@ function InteractiveTimer () {
                 </h1>
                 <h3 className='hero-section-flair-text'>BEFORE IT IS COMPLETELY UNINHABITABLE.</h3>
             </div>
-            <div class="slidecontainer">
-                <input type="range" min="-1" max="1" value="0" class="slider" id="greenhouseGases" onChange={(props) => { const { value } = props; 
-                                                                                                                            setTime({greenhouse: 24743 - (24743 * 0.96 * value)})}} />
+            <div className="slidecontainer">
+                <input type="range" min="-100" max="100" className="slider" id="greenhouseGases" onChange={handleGreenhouseSlider} />
             </div>
-            <div class="slidecontainer">
-                <input type="range" min="-1" max="1" value="0" class="slider" id="Absorbtion" onChange={(props) => { const { value } = props;
-                                                                                                                        setTime({absorbtion: 24743 - (24743 * 0.03 * value)})}} />
+            <div className="slidecontainer">
+                <input type="range" min="-100" max="100" className="slider" id="Absorbtion" onChange={handleAbsorbtionSlider} />
             </div>
-            <div class="slidecontainer">
-                <input type="range" min="-1" max="1" value="0" class="slider" id="Natural Changes" onChange={(props) => { const { value } = props;
-                                                                                                                            setTime({natural: 24743 - (24743 * 0.01 * value)})}} />
+            <div className="slidecontainer">
+                <input type="range" min="-100" max="100" className="slider" id="Natural Changes" onChange={handleNaturalSlider}/>
             </div>
         </>
     );
