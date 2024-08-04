@@ -49,7 +49,6 @@ function InteractiveTimer () {
     };
 
     useEffect(() => {
-        getTimeUntilDDay();
         const intervalId = setInterval(getTimeUntilDDay, 1000);
         return () => clearInterval(intervalId); // Cleanup interval on component unmount
     }, []); // Empty dependency array to run only once on mount
@@ -89,6 +88,21 @@ function InteractiveTimer () {
     return (
         <>
             <div className='i-hero-section giant-timer'>
+                <div className='title-area'>
+                    <h1 className='smaller-title'>Take it Into Your Own Hands</h1>
+                    <p className='large-subtitle'>See what happens to the doomsday clock when you change any of the parameters mentioned above</p>
+                </div>
+                <div className='sliders'>
+                    <div className="slidecontainer">
+                        <input type="range" min="-100" max="100" className="slider" id="greenhouseGases" onChange={handleGreenhouseSlider} />
+                    </div>
+                    <div className="slidecontainer">
+                        <input type="range" min="-100" max="100" className="slider" id="Absorbtion" onChange={handleAbsorbtionSlider} />
+                    </div>
+                    <div className="slidecontainer">
+                        <input type="range" min="-100" max="100" className="slider" id="Natural Changes" onChange={handleNaturalSlider}/>
+                    </div>
+                </div>
                 <h3 className='i-hero-section-flair-text'>YOUR SCENARIO HAS</h3>
                 <h1 className="i-timer-text i-giant-timer">
                     {TIME.y}<span className="i-time-subsection i-giant-timer">years</span>
@@ -99,15 +113,6 @@ function InteractiveTimer () {
                     {TIME.s}<span className="i-time-subsection i-giant-timer">seconds</span>
                 </h1>
                 <h3 className='i-hero-section-flair-text'>BEFORE IT IS COMPLETELY UNINHABITABLE.</h3>
-            </div>
-            <div className="slidecontainer">
-                <input type="range" min="-100" max="100" className="slider" id="greenhouseGases" onChange={handleGreenhouseSlider} />
-            </div>
-            <div className="slidecontainer">
-                <input type="range" min="-100" max="100" className="slider" id="Absorbtion" onChange={handleAbsorbtionSlider} />
-            </div>
-            <div className="slidecontainer">
-                <input type="range" min="-100" max="100" className="slider" id="Natural Changes" onChange={handleNaturalSlider}/>
             </div>
         </>
     );
