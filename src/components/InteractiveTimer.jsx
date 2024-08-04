@@ -60,7 +60,7 @@ function InteractiveTimer () {
     return (
         <>
             <div className='i-hero-section giant-timer'>
-                <h3 className='i-hero-section-flair-text'>THE WORLD HAS</h3>
+                <h3 className='i-hero-section-flair-text'>YOUR SCENARIO HAS</h3>
                 <h1 className="i-timer-text i-giant-timer">
                     {TIME.y}<span className="i-time-subsection i-giant-timer">years</span>
                     {TIME.mo}<span className="i-time-subsection i-giant-timer">months</span>
