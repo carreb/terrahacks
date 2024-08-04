@@ -254,8 +254,10 @@ let timeline = [
   },
   {
     title: "2000 CE",
-    hasCard: false,
+    hasCard: true,
     year: 2000,
+    cardTitle: "Hottest Years on Record",
+    cardDetailedText: "The 21st century has been rife with hottest years ever recorded, starting with a report released in 2010 which found that the first decade of the 21st century was the hottest decade to date, all five of top five hottest years in history were after 2015, with the most recent, which was the hottest recorded year to date."
   },
   {
     title: "2024 CE",

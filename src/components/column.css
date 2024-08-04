@@ -17,6 +17,14 @@
     height: 150px;
 }
 
+.float-image-right {
+    float: right;
+    margin-left: 15px;
+    /* Add some margin to the left for spacing */
+    width: 250px;
+    height: 150px;
+}
+
 img {
     width: 250px;
     height: 150px;
