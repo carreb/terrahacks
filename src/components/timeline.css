@@ -105,3 +105,52 @@
     width: 100%;
     height: 200px;
 }
+
+.timeline-labels {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    align-self: center;
+    text-align: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+    .title-container {
+        height: 400px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .title-container {
+        height: 500px;
+    }
+    .title-container h1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .timeline-item {
+        rotate: 0deg;
+        font-size: 12px;
+        text-orientation:upright;
+        writing-mode: horizontal-tb;
+        width: fit-content;
+    }
+    .clickable-timeline-element {
+        padding: 0;
+    }
+    .timeline {
+        padding-left: 0;
+    }
+}
+
+.unhidden {
+    z-index: 10;
+}
+.hidden-hidden {
+    display: none;
+}

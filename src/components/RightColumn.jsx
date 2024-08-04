@@ -5,7 +5,8 @@ const LeftColumn = () => {
     return (
         <div className="homepage-news-column">
             <div className="left-section">
-                <h1>Other sources</h1>
+                <h1 className="smaller-title">Other Sources</h1>
+                <img src="https://via.placeholder.com/500x300" alt="" className="float-image-left" />
                 <p>
                     Greenhouse gases contribute a lot to climate change, but there are many other causes.
                     Of the more impactful changes is absorbtion.
@@ -15,9 +16,10 @@ const LeftColumn = () => {
                     Ice and glaciers are one of the most prominent reflectors of heat, and with rising temperatires, the melting ice cause a feedback loop that increases absorbtion, which causes more melting, which causes more absobrtion.
                     It is believed that the net effect of absorbtion on the earth is a slight cooling, it does not mean that humans in the future will tend to keep it this way, or that there are ways for us to make it have an even greater cooling effect.
                 </p>
-                <img src="https://via.placeholder.com/500x300" alt="" className="float-image-left" />
             </div>
             <div className="right-section">
+                <h1 className="smaller-title">Natural Causes?</h1>
+                <img src="https://via.placeholder.com/500x300" alt="" className="float-image-right" />
                 <p>
                     A many times overstated contributor of climate change is natural causes.
                     In fact, natural causes, ranging from variable solar strength to volcanic erruptions have only accounted for a difference in 0.1 degrees Celsius in total warming from 1890 to 2010.
@@ -28,7 +30,6 @@ const LeftColumn = () => {
                     Even though they are expelling particles such as CO2 into the atmosphere, they are suspended for much shorter times than greenhouse gases.
                     More importantly, they act as large clouds of reflectors of sunlight.
                 </p>
-                <img src="https://via.placeholder.com/500x300" alt="" className="float-image-right" />
             </div>
         </div>
     )
