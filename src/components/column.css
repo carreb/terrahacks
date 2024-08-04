@@ -15,6 +15,7 @@
     /* Add some margin to the right for spacing */
     width: 250px;
     height: 150px;
+    border-radius: 10px;
 }
 
 .float-image-right {
@@ -23,6 +24,8 @@
     /* Add some margin to the left for spacing */
     width: 250px;
     height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
 img {
