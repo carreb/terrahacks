@@ -34,16 +34,8 @@ const Timeline = () => {
     return (
         <>
         <div className="title-container">
-            <h1 style={{
-            textAlign: 'center',
-            fontSize: '4rem',
-            marginTop: '-2rem'
-        }}>TIME IS RUNNING OUT</h1>
-        <p style={{
-            textAlign: 'center',
-            fontSize: '20px',
-            width: '70%',
-        }}>We have limited time to reduce emissions before the effects of climate change become <b>irreversible.</b> Click on the years to learn more.</p>
+            <h1 className="large-title">TIME IS RUNNING OUT</h1>
+        <p className="large-subtitle">We have limited time to reduce emissions before the effects of climate change become <b>irreversible.</b> Click on the years to learn more.</p>
         </div>
         <div className="timeline-container">
             <div className="timeline-line">

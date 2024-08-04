@@ -5,7 +5,7 @@ const LeftColumn = () => {
     return (
         <div className="homepage-news-column">
             <div className="left-section">
-                <h1>GREENHOUSE GASES</h1>
+                <h1 className="smaller-title">GREENHOUSE GASES</h1>
                 <p>
                     Greenhouse gases are by far the greatest contributors of climate change.
                     To stop climate change, greenhouse gas emissions need to be reduced to net zero worldwide.
