@@ -95,13 +95,16 @@ function InteractiveTimer () {
                 </div>
                 <div className='sliders'>
                     <div className="slidecontainer">
+                        <label htmlFor="greenhouseGases">Greenhouse Gases</label>
                         <input type="range" min="-100" max="100" className="slider" id="greenhouseGases" onChange={handleGreenhouseSlider} />
                     </div>
                     <div className="slidecontainer">
+                        <label htmlFor="Absorbtion">Absorbtion</label>
                         <input type="range" min="-100" max="100" className="slider" id="Absorbtion" onChange={handleAbsorbtionSlider} />
                     </div>
                     <div className="slidecontainer">
-                        <input type="range" min="-100" max="100" className="slider" id="Natural Changes" onChange={handleNaturalSlider}/>
+                        <label htmlFor="NaturalChanges">Natural Changes</label>
+                        <input type="range" min="-100" max="100" className="slider" id="NaturalChanges" onChange={handleNaturalSlider}/>
                     </div>
                 </div>
                 <h3 className='i-hero-section-flair-text'>YOUR SCENARIO HAS</h3>
