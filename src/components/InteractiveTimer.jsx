@@ -21,6 +21,7 @@ function InteractiveTimer () {
     const [D_DAY, setD_DAY] = useState(new Date(1576800000 + greenhouse * natural * absorbtion));
 
     const getTimeUntilDDay = () => {
+        setD_DAY(new Date(1576800000 + greenhouse * natural * absorbtion));
         let time = {};
         let currentTime = new Date().getTime();
         let timeUntil = D_DAY - currentTime;
