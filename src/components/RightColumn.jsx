@@ -6,7 +6,7 @@ const LeftColumn = () => {
         <div className="homepage-news-column">
             <div className="left-section">
                 <h1 className="smaller-title">Other Sources</h1>
-                <img src="../public/images/diagram_absorbtion.png" alt="" className="float-image-left" />
+                <img src="/images/diagram_absorbtion.png" alt="" className="float-image-left" />
                 <p>
                     Greenhouse gases contribute a lot to climate change, but there are many other causes.
                     Of the more impactful changes is absorbtion.
@@ -19,7 +19,7 @@ const LeftColumn = () => {
             </div>
             <div className="right-section">
                 <h1 className="smaller-title">Natural Causes?</h1>
-                <img src="../public/images/diagram_relationship.png" alt="" className="float-image-right" />
+                <img src="/images/diagram_relationship.png" alt="" className="float-image-right" />
                 <p>
                     A many times overstated contributor of climate change is natural causes.
                     In fact, natural causes, ranging from variable solar strength to volcanic erruptions have only accounted for a difference in 0.1 degrees Celsius in total warming from 1890 to 2010.
