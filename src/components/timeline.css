@@ -112,7 +112,7 @@
     justify-content: center;
     width: 90%;
     align-self: center;
-    text-align: center;
+    text-align: left;
     align-items: center;
 }
 
@@ -141,6 +141,9 @@
         width: fit-content;
     }
     .clickable-timeline-element {
+        padding: 0;
+    }
+    .item-title {
         padding: 0;
     }
     .timeline {

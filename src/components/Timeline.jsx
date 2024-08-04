@@ -58,7 +58,7 @@ const Timeline = () => {
             {(isOnSmallScreen()) ? 
             <ol className="timeline-labels">
                 {timelineItems.map((item, index) => (
-                    <li className={item.hasCard ? "timeline-item unhidden" : "timeline-item hidden-hidden"}>
+                    <li className={(item.hasCard || item.year % 500 == 0) ? "timeline-item" : "timeline-item hidden-hidden"}>
                         {(item.year % 500 == 0 || item.hasCard) ? <div><span className={item.hasCard ? "item-title clickable-timeline-element" : "item-title"} onClick={() => openNewCard(index)}>{item.title}</span>{item.hasCard ? <><span> - </span><span className="timeline-card-title">{item.cardTitle}</span></> : ''}</div> : ''}
                     </li>
                 ))}

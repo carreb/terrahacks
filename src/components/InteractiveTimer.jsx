@@ -88,17 +88,17 @@ function InteractiveTimer () {
 
     return (
         <>
-            <div className='hero-section giant-timer'>
-                <h3 className='hero-section-flair-text'>THE WORLD HAS</h3>
-                <h1 className="timer-text giant-timer">
-                    {TIME.y}<span className="time-subsection giant-timer">years</span>
-                    {TIME.mo}<span className="time-subsection giant-timer">months</span>
-                    {TIME.d}<span className="time-subsection giant-timer">days</span>
-                    {TIME.h}<span className="time-subsection giant-timer">hours</span>
-                    {TIME.min}<span className="time-subsection giant-timer">minutes</span>
-                    {TIME.s}<span className="time-subsection giant-timer">seconds</span>
+            <div className='i-hero-section giant-timer'>
+                <h3 className='i-hero-section-flair-text'>YOUR SCENARIO HAS</h3>
+                <h1 className="i-timer-text i-giant-timer">
+                    {TIME.y}<span className="i-time-subsection i-giant-timer">years</span>
+                    {TIME.mo}<span className="i-time-subsection i-giant-timer">months</span>
+                    {TIME.d}<span className="i-time-subsection i-giant-timer">days</span>
+                    {TIME.h}<span className="i-time-subsection i-giant-timer">hours</span>
+                    {TIME.min}<span className="i-time-subsection i-giant-timer">minutes</span>
+                    {TIME.s}<span className="i-time-subsection i-giant-timer">seconds</span>
                 </h1>
-                <h3 className='hero-section-flair-text'>BEFORE IT IS COMPLETELY UNINHABITABLE.</h3>
+                <h3 className='i-hero-section-flair-text'>BEFORE IT IS COMPLETELY UNINHABITABLE.</h3>
             </div>
             <div className="slidecontainer">
                 <input type="range" min="-100" max="100" className="slider" id="greenhouseGases" onChange={handleGreenhouseSlider} />

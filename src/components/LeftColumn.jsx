@@ -5,7 +5,7 @@ const LeftColumn = () => {
     return (
         <div className="homepage-news-column">
             <div className="left-section">
-                <h1 className="smaller-title">GREENHOUSE GASES</h1>
+                <h1 className="smaller-title">Greenhouse Gases</h1>
                 <img src="../public/images/graph_gases.png" alt="" className="float-image-left" />
                 <p>
                     Greenhouse gases are by far the greatest contributors of climate change.
@@ -17,6 +17,7 @@ const LeftColumn = () => {
                 </p>
             </div>
             <div className="right-section">
+                <h1 className="smaller-title">Methane (Greenhouse Gases cont.)</h1>
                 <img src="../public/images/graph_1.png" alt="" className="float-image-right" />
                 <p>
                     Methane is the second most generated greenhouse gas, where modern concentrations are 2.5x more than their pre industrial concentrations.
