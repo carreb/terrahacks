@@ -6,6 +6,7 @@ import BloodDripSVG from '../BloodDripSVG.jsx'; // ignore error? it doesn't seem
 import StickyTime from '../StickyTimer';
 import Timeline from '../Timeline';
 import LeftColumn from '../LeftColumn';
+import { useNavigate } from 'react-router-dom';
 
 const convertPxToVh = (px) => {
   return (px / window.innerHeight) * 100;
@@ -18,11 +19,17 @@ const convertVhToPx = (vh) => {
 function Home() {
   const scrollPosition = useRef(0);
   const lastScrollTime = useRef(0);
+  const navigate = useNavigate();
   const [scrollY, setScrollY] = useState(window.scrollY); // State to track scroll position for rendering
 
   const scrollSticky = convertVhToPx(49); // this variable controls when the sticky timer navbar thingie appears
 
   useEffect(() => {
+
+    if (window.innerWidth < 290) {
+        navigate('/device-does-not-meet-required-screen-size');
+    }
+
     const handleScroll = () => {
       setScrollY(window.scrollY); // Update scrollY state
 

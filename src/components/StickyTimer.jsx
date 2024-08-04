@@ -36,6 +36,10 @@ function StickyTimer() {
         return time > 1 ? 's' : '';
     }
 
+    const onMobileScreen = () => {
+        return window.innerWidth < 530;
+    }
+
     useEffect(() => {
         getTimeUntilDDay();
         setInterval(() => {
@@ -50,17 +54,17 @@ function StickyTimer() {
                     {marginRight: '5px'}
                 }>EARTH HAS</p>
                     <span className='sticky-timer-text'>{TIME.y}</span>
-                    <span className='sticky-timer-subsection'>year{isTimePlural(TIME.y)}</span>
+                    <span className='sticky-timer-subsection'>{onMobileScreen() ? ":" : `year${isTimePlural(TIME.y)}`}</span>
                     <span className='sticky-timer-text'>{TIME.mo}</span>
-                    <span className='sticky-timer-subsection'>month{isTimePlural(TIME.mo)}</span>
+                    <span className='sticky-timer-subsection'>{onMobileScreen() ? ":" : `month${isTimePlural(TIME.mo)}`}</span>
                     <span className='sticky-timer-text'>{TIME.d}</span>
-                    <span className='sticky-timer-subsection'>day{isTimePlural(TIME.d)}</span>
+                    <span className='sticky-timer-subsection'>{onMobileScreen() ? ":" : `day${isTimePlural(TIME.d)}`}</span>
                     <span className='sticky-timer-text'>{TIME.h}</span>
-                    <span className='sticky-timer-subsection'>hour{isTimePlural(TIME.h)}</span>
+                    <span className='sticky-timer-subsection'>{onMobileScreen() ? ":" : `hour${isTimePlural(TIME.h)}`}</span>
                     <span className='sticky-timer-text'>{TIME.min}</span>
-                    <span className='sticky-timer-subsection'>minute{isTimePlural(TIME.min)}</span>
+                    <span className='sticky-timer-subsection'>{onMobileScreen() ? ":" : `minute${isTimePlural(TIME.min)}`}</span>
                     <span className='sticky-timer-text'>{TIME.s}</span>
-                    <span className='sticky-timer-subsection'>second{isTimePlural(TIME.s)}</span>
+                    <span className='sticky-timer-subsection'>{onMobileScreen() ? "" : `second${isTimePlural(TIME.s)}`}</span>
                 <p className='sticky-timer-flair-text' style={
                     {marginLeft: '5px'}
                 }>LEFT.</p>    
