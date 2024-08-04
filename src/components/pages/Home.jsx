@@ -9,6 +9,7 @@ import LeftColumn from '../LeftColumn';
 import RightColumn from '../RightColumn';
 import { useNavigate } from 'react-router-dom';
 import InteractiveTimer from '../InteractiveTimer';
+import MoleshireGameCTA from '../MoleshireGameCTA.jsx'; 
 
 const convertPxToVh = (px) => {
   return (px / window.innerHeight) * 100;
@@ -76,7 +77,10 @@ function Home() {
         <LeftColumn />
         <RightColumn />
       </div>
-     <InteractiveTimer />
+      <div className='interactive-timer-div'>
+        <InteractiveTimer />
+      </div>
+     <MoleshireGameCTA />
     </>
   ) : (
     <div className="homepage-flex-container">
