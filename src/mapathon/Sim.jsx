@@ -5,7 +5,7 @@ import Footer from './footer';
 import Intro from './intro';
 import { MapInteractionCSS } from 'react-map-interaction';
 import Piece from './Piece';
-import './App.css'; // Import global styles
+import './Sim.css'; // Import global styles
 import Button from './Button';
 import Canvas from './Canvas';
 import Translation from './Translation';
