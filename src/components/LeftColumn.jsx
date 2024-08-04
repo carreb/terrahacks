@@ -5,17 +5,27 @@ const LeftColumn = () => {
     return (
         <div className="homepage-news-column">
             <div className="left-section">
-                <h1>SIGMA SKIBIDI</h1>
-                <p>Toilet skibidi sigma Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, enim.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laborum quasi quibusdam repellendus illum exercitationem similique sapiente. Error eius nulla adipisci nostrum laudantium, recusandae labore perspiciatis beatae, nemo vitae quibusdam vel inventore iste deserunt. Atque quia, dolorem similique error repellat nulla soluta ut nemo beatae aspernatur blanditiis distinctio, incidunt architecto, delectus dolorum quam ullam sint laboriosam eius praesentium officia deserunt veritatis corrupti reprehenderit. Quisquam sed dicta iusto impedit quod, adipisci eligendi unde consequuntur nesciunt! Earum unde hic magni neque. Nisi beatae officiis eaque ducimus ex, nam odio atque est adipisci inventore incidunt officia non ratione. Velit non necessitatibus tempora itaque.</p>
+                <h1>GREENHOUSE GASES</h1>
+                <p>
+                    Greenhouse gases are by far the greatest contributors of climate change.
+                    To stop climate change, greenhouse gas emissions need to be reduced to net zero worldwide.
+                    The four primary greenhouse gases are carbon dioxide (CO2), methane, nitrous oxide, and fluorinated gases.
+                    Carbon Dioxide is the largest contributor, where over 30 billion tons of gas are released by humans every year.
+                    Since pre industrial times, net carbon dioxide concentrations have increased by 40%, with most of increase occuring in the 21st and late 20th centrury.
+                    Major common sources include burning coal and other fossil fuels and cutting down forests.
+                </p>
                 <img src="https://via.placeholder.com/500x300" alt="" className="float-image-left" />
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, obcaecati? Eveniet molestiae voluptates praesentium exercitationem nostrum eum illum rerum, sint facilis debitis perferendis dolores quae ut. Voluptates ratione beatae porro officiis, dolorum quaerat dignissimos iste unde blanditiis! Culpa velit ratione tenetur ullam omnis assumenda enim natus dignissimos tempora ad autem, molestias quaerat reiciendis excepturi quia dolor nulla vero est voluptate vitae non ea numquam nostrum! Nostrum fuga velit obcaecati, libero nihil recusandae sed harum consequuntur consequatur quis eius omnis vero eveniet corrupti ex veritatis corporis hic suscipit fugit? Assumenda dicta vero voluptas commodi, exercitationem dignissimos non maxime tempora voluptatem corporis!</p>
             </div>
             <div className="right-section">
-                <p>Toilet skibidi sigma Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, enim.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laborum quasi quibusdam repellendus illum exercitationem similique sapiente. Error eius nulla adipisci nostrum laudantium, recusandae labore perspiciatis beatae, nemo vitae quibusdam vel inventore iste deserunt. Atque quia, dolorem similique error repellat nulla soluta ut nemo beatae aspernatur blanditiis distinctio, incidunt architecto, delectus dolorum quam ullam sint laboriosam eius praesentium officia deserunt veritatis corrupti reprehenderit. Quisquam sed dicta iusto impedit quod, adipisci eligendi unde consequuntur nesciunt! Earum unde hic magni neque. Nisi beatae officiis eaque ducimus ex, nam odio atque est adipisci inventore incidunt officia non ratione. Velit non necessitatibus tempora itaque.</p>
+                <p>
+                    Methane is the second most generated greenhouse gas, where modern concentrations are 2.5x more than their pre industrial concentrations.
+                    The primary souces of emission of methane gas are from dairy farms and from melting glaciers and ice caps.
+                    Another common greeenhouse gas is nitrous oxide, which has risen 20% since pre industrial times.
+                    Synthetic and organic fertalizers both release nitrous oxide into the atmosphere, as does manure and the burning of agricultural residues.
+                    The least commonly understood cause of greenhouse gases come from the various household products that release fluorinated gases.
+                    Fluorinated gases have a 23000 times more potent warming effect than carbon dioxide, and can be released from fridges, air conditioners, insulation, and electrical distribution.
+                </p>
                 <img src="https://via.placeholder.com/500x300" alt="" className="float-image-right" />
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, obcaecati? Eveniet molestiae voluptates praesentium exercitationem nostrum eum illum rerum, sint facilis debitis perferendis dolores quae ut. Voluptates ratione beatae porro officiis, dolorum quaerat dignissimos iste unde blanditiis! Culpa velit ratione tenetur ullam omnis assumenda enim natus dignissimos tempora ad autem, molestias quaerat reiciendis excepturi quia dolor nulla vero est voluptate vitae non ea numquam nostrum! Nostrum fuga velit obcaecati, libero nihil recusandae sed harum consequuntur consequatur quis eius omnis vero eveniet corrupti ex veritatis corporis hic suscipit fugit? Assumenda dicta vero voluptas commodi, exercitationem dignissimos non maxime tempora voluptatem corporis!</p>
             </div>
         </div>
     )
