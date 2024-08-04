@@ -31,6 +31,18 @@ const Timeline = () => {
         window.scrollTo(0, newCard.offsetTop - newCard.offsetHeight - 350);
     }
 
+    const isOnSmallScreen = () => {
+        if (window.innerWidth < 1200) {
+            return true;
+        }
+    }
+
+    const calculateLabelPositionOnScreen = (index) => {
+        const totalEvents = timelineItems.length;
+        const percentage = ((index / totalEvents) * 100) - 1;
+        return percentage;
+    }
+
     return (
         <>
         <div className="title-container">
@@ -43,14 +55,24 @@ const Timeline = () => {
                     <div className="timeline-dot">item</div>
                 ))} */}
             </div>
+            {(isOnSmallScreen()) ? 
+            <ol className="timeline-labels">
+                {timelineItems.map((item, index) => (
+                    <li className={item.hasCard ? "timeline-item unhidden" : "timeline-item hidden-hidden"}>
+                        {(item.year % 500 == 0 || item.hasCard) ? <div><span className={item.hasCard ? "item-title clickable-timeline-element" : "item-title"} onClick={() => openNewCard(index)}>{item.title}</span>{item.hasCard ? <><span> - </span><span className="timeline-card-title">{item.cardTitle}</span></> : ''}</div> : ''}
+                    </li>
+                ))}
+            </ol> 
+            : 
             <ol className="timeline">
                 {timelineItems.map((item, index) => (
-                    <li className="timeline-item" >
+                    <li className={item.hasCard ? "timeline-item unhidden" : "timeline-item hidden"} >
                         {(item.year % 500 == 0 || item.hasCard) ? <div><span className={item.hasCard ? "item-title clickable-timeline-element" : "item-title"} onClick={() => openNewCard(index)}>{item.title}</span>{item.hasCard ? <><span> - </span><span className="timeline-card-title">{item.cardTitle}</span></> : ''}</div> : ''}
                         {/* Conditional rendering if the timeline item has a card, show the title of the card. */}
                     </li>
                 ))}
-            </ol>
+            </ol>}
+            
             <div className="timeline-cards">
                 {timelineItems.map((item, index) => (
                     item.hasCard ? <div className="timeline-card" id={`card-${index}`}>
@@ -60,6 +82,7 @@ const Timeline = () => {
                 ))}
             </div>
         </div>
+        
         </>
     );
 }
