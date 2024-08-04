@@ -8,6 +8,7 @@ import Timeline from '../Timeline';
 import LeftColumn from '../LeftColumn';
 import RightColumn from '../RightColumn';
 import { useNavigate } from 'react-router-dom';
+import InteractiveTimer from '../InteractiveTimer';
 
 const convertPxToVh = (px) => {
   return (px / window.innerHeight) * 100;
@@ -75,6 +76,7 @@ function Home() {
         <LeftColumn />
         <RightColumn />
       </div>
+     <InteractiveTimer />
     </>
   ) : (
     <div className="homepage-flex-container">
