@@ -272,7 +272,7 @@ let timeline = [
     year: 2030,
     cardTitle: "The Tipping Point",
     cardDetailedText:
-      "If carbon emissions are not reduced by at least 43% by the year 2030, some of the worst consequences of climate change are already inevitable.",
+      "If carbon emissions are not reduced by at least 43% by the year 2030, a majority of the worst consequences of climate change are already inevitable.",
   },
   {
     title: "2100",

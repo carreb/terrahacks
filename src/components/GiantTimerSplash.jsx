@@ -65,7 +65,7 @@ function GiantTimerSplash () {
                     {TIME.min}<span className="time-subsection giant-timer">minutes</span>{onPhoneScreen() ? <br /> : null}
                     {TIME.s}<span className="time-subsection giant-timer">seconds</span>{onPhoneScreen() ? <br /> : null}
                 </h1>
-                <h3 className='hero-section-flair-text'>{onPhoneScreen() ? "BEFORE EXTINCTION" : "BEFORE IT IS COMPLETELY UNINHABITABLE"}</h3>
+                <h3 className='hero-section-flair-text'>{onPhoneScreen() ? "BEFORE EXTINCTION" : "BEFORE IT IS COMPLETELY UNINHABITABLE."}</h3>
             </div>
             <div className='hero-section-smaller giant-timer'>
                 <h3 className='hero-section-flair-text'>AND THE NEXT</h3>
