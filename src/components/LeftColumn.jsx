@@ -11,7 +11,7 @@ const LeftColumn = () => {
                     Greenhouse gases are by far the greatest contributors of climate change.
                     To stop climate change, greenhouse gas emissions need to be reduced to net zero worldwide.
                     The four primary greenhouse gases are carbon dioxide (CO2), methane, nitrous oxide, and fluorinated gases.
-                    Carbon Dioxide is the largest contributor, where over 30 billion tons of gas are released by humans every year.
+                    Carbon dioxide is the largest contributor, where over 30 billion tons of gas are released by humans every year.
                     Since pre industrial times, net carbon dioxide concentrations have increased by 40%, with most of increase occuring in the 21st and late 20th centrury.
                     Major common sources include burning coal and other fossil fuels and cutting down forests.
                 </p>
