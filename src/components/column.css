@@ -3,6 +3,7 @@
     flex-direction: column;
     width: 40%;
     font-size: 18px;
+    align-items: stretch;
 }
 
 .left-section {
@@ -37,4 +38,25 @@ img {
 p {
     overflow-x: auto;
     display: inline;
+}
+
+@media screen and (max-width: 768px) {
+    .homepage-news-column {
+        width: 100%;
+    }
+
+    .float-image-left {
+        width: 100%;
+        height: 150px;
+    }
+
+    .float-image-right {
+        width: 100%;
+        height: 150px;
+    }
+
+    img {
+        width: 100%;
+        height: 150px;
+    }
 }
