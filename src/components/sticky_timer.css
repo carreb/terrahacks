@@ -55,3 +55,80 @@
         transform: translateY(-100%);
     }
 }
+
+@media screen and (max-width: 835px) {
+    .sticky-timer {
+        height: 60px;
+        font-size: 25px;
+    }
+
+    .sticky-timer-flair-text {
+        font-size: 25px;
+    }
+
+    .sticky-timer-text {
+        font-size: 35px;
+    }
+
+    .sticky-timer-subsection {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .sticky-timer {
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .sticky-timer-flair-text {
+        font-size: 20px;
+    }
+
+    .sticky-timer-text {
+        font-size: 30px;
+    }
+
+    .sticky-timer-subsection {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .sticky-timer {
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .sticky-timer-flair-text {
+        font-size: 15px;
+    }
+
+    .sticky-timer-text {
+        font-size: 25px;
+    }
+
+    .sticky-timer-subsection {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .sticky-timer {
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .sticky-timer-flair-text {
+        font-size: 15px;
+    }
+
+    .sticky-timer-text {
+        font-size: 25px;
+    }
+
+    .sticky-timer-subsection {
+        font-size: 25px;
+        font-weight: 400;
+    }
+}
