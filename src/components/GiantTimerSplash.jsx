@@ -43,6 +43,10 @@ function GiantTimerSplash () {
         return years;
     };
 
+    const onPhoneScreen = () => {
+        return window.innerWidth < 530;
+    }
+
     useEffect(() => {
         getTimeUntilDDay();
         const intervalId = setInterval(getTimeUntilDDay, 1000);
@@ -54,14 +58,14 @@ function GiantTimerSplash () {
             <div className='hero-section giant-timer'>
                 <h3 className='hero-section-flair-text'>THE WORLD HAS</h3>
                 <h1 className="timer-text giant-timer">
-                    {TIME.y}<span className="time-subsection giant-timer">years</span>
-                    {TIME.mo}<span className="time-subsection giant-timer">months</span>
-                    {TIME.d}<span className="time-subsection giant-timer">days</span>
-                    {TIME.h}<span className="time-subsection giant-timer">hours</span>
-                    {TIME.min}<span className="time-subsection giant-timer">minutes</span>
-                    {TIME.s}<span className="time-subsection giant-timer">seconds</span>
+                    {TIME.y}<span className="time-subsection giant-timer">years</span>{onPhoneScreen() ? <br /> : null}
+                    {TIME.mo}<span className="time-subsection giant-timer">months</span>{onPhoneScreen() ? <br /> : null}
+                    {TIME.d}<span className="time-subsection giant-timer">days</span>{onPhoneScreen() ? <br /> : null}
+                    {TIME.h}<span className="time-subsection giant-timer">hours</span>{onPhoneScreen() ? <br /> : null}
+                    {TIME.min}<span className="time-subsection giant-timer">minutes</span>{onPhoneScreen() ? <br /> : null}
+                    {TIME.s}<span className="time-subsection giant-timer">seconds</span>{onPhoneScreen() ? <br /> : null}
                 </h1>
-                <h3 className='hero-section-flair-text'>BEFORE IT IS COMPLETELY UNINHABITABLE.</h3>
+                <h3 className='hero-section-flair-text'>{onPhoneScreen() ? "BEFORE EXTINCTION" : "BEFORE IT IS COMPLETELY UNINHABITABLE"}</h3>
             </div>
             <div className='hero-section-smaller giant-timer'>
                 <h3 className='hero-section-flair-text'>AND THE NEXT</h3>
